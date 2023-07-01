@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+.container{
+	position: relative;
+}
+
+.topleft {
+	position: fixed;
+	top: 48px;
+	left: 180px;
+	font-size: 22px;
+	color: #09095A;
+  }
+
+img{ 
+	width: 70px;
+	height: auto;
+	opacity: 100;
+}
+
+section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+header{
+	position: relative;
+	top: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #000;
+	text-decoration: none;
+	font-weight: 500;
+	letter-spacing: 1px;
+    padding: 2px 15px;
+	margin: 15px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover{
+    background: rgb(245, 214, 135);
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #000;
+    float: right;
+    line-height: 30px;
+    margin-right: 0px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.content{
+    margin: 60px 100px;
+}
+
+.content .info{
+    float: left;
+    margin-right: 80px;
+}
+
+.content .info h2{
+	color: #09095A;
+	font-size: 32px;
+    text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 60px;
+	margin-bottom: 12px;
+}
+
+.content .info p{
+    background-color: #45b6fe;
+    padding: 30px;
+    border-radius: 80px;
+    color: rgb(0, 0, 0);
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.content h2{
+	color: #09095A;
+	font-size: 32px;
+    text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 60px;
+	margin-bottom: 12px; 
+}
+
+.content .social-media{
+  	display: flex;
+  	justify-content: center;
+ 	background-color: #45b6fe;
+  	padding: 37px;
+  	border-radius: 80px;
+}
+
+.content .social-icon{
+	height: 60px;
+	width: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0.45rem;
+	color: #333;
+	border-radius: 50%;
+	border: 1px solid #333;
+	text-decoration: none;
+	font-size: 2rem;
+	transition: 0.3s;
+}
+
+.content .social-icon:hover{
+	color: #4481eb;
+	border-color: #4481eb;
+}
+
+@media (max-width: 1200px){
+
+	img{
+		margin-left: -60px;
+	}
+
+	.topleft{
+		top: 48px;
+		left: 120px;
+	}
+
+	nav ul{
+		margin-right: -60px;
+		transition: all 300ms ease;
+	}
+
+    nav ul li a{
+		padding: 2px 15px;
+		margin: 1px;
+    }
+
+	.content{
+		margin: 60px 100px;
+	}
+
+	.content .info{
+		float: none;
+		margin-right: 0;
+	}
+
+	.content .info p{
+		padding: 30px 10px;
+	}
+
+	.content .social-media{
+		float: none;
+	}
+
+}
+
+@media (max-width: 768px){
+	
+	img{
+		margin-left: -60px;
+	}
+
+	.topleft{
+		font-size: 13px;
+		top: 45px;
+		left: 130px;
+		margin-right: 80px;
+	}
+	
+    .checkbtn{
+		top: 0;
+		margin-right: -70px;
+		padding: 5px;
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 0px;
+        right: -100%;
+		margin: 0;
+        text-align: center;
+        transition: all 300ms ease;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 120px 0;
+        line-height: 30px;
+    }
+
+	nav ul li a{
+		color: #fff;
+	}
+
+    a:hover{
+        background: none;
+        color:palegoldenrod;
+    }
+
+    #check:checked ~ ul{
+        right: 0;
+    }
+
+	.content{
+		margin: 60px 10px;
+	}
+
+	.content .info h2{
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 20px;
+		margin-bottom: 12px;
+	}
+
+	.content h2{
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 20px;
+		margin-bottom: 12px; 
+	}
+
+	.content .info p{
+		padding: 30px 10px;
+		font-size: 13px;
+		font-weight: 500;
+		margin-bottom: 75px;
+	}
+
+	.content .social-media{
+		padding: 37px;
+    }
+
+	.content .social-icon{
+		height: 40px;
+		width: 40px;
+		font-size: 1.8rem;
+	}
+
+}
+
+
